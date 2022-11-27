@@ -1,0 +1,126 @@
+<!-- this is the index page that the clients will see once they get our link -->
+<html>
+    <head>
+        <!-- header start -->
+        <!-- this will be the title of the project -->
+        <title>Encryption and Decryption </title>
+
+        <!-- we now add our styles -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- i will use addationa styles from google to mak work easier -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+
+        <!-- adding other scripts from google -->
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
+
+        <!-- cryptography will be happeniong here and it will be using Advanced Encryption Standard (AES) -->
+        <script src="crypto-js-aes.js"></script>
+
+         <!-- our funtions -->
+         <script src="main.js"></script>
+        
+        <!-- our header is end -->
+    </head>
+    <body>
+        <!-- body start -->
+        <!-- this are syles we start by creating a section -->
+        <section class="section">
+            <div class="container">
+            <!-- section name -->
+                <h1 class="title is-centred">Encryption and Decryption</h1>
+                <div class="columns">
+                    <div class="column">
+                        <div class="box">
+                            <form id="encrypt-set">
+                                <div class="field">
+                                  <label class="label">Text to encrypt</label>
+                                  <div class="control">
+                                    <input class="input input-string" id="encrypt-plain-string" type="text" placeholder="text here to encrypt">
+                                  </div>
+                                </div>
+                
+                                <div class="field">
+                                  <label class="label">secret to encode string with</label>
+                                  <div class="control">
+                                    <input class="input input-string" id="encrypt-password" type="text" placeholder="secret">
+                                  </div>
+                                </div>
+                
+                                <div class="field is-grouped">
+                                  <p class="control">
+                                    <input id="encrypt-submit" type="submit" value="Encrypt" class="button is-primary">
+                                  </p>
+                
+                                  <p class="control">
+                                    <input type="submit" value="Clear" class="clear-form button is-light">
+                                  </p>
+                                </div>
+                              </form>
+                            <!-- ecnrypted text results -->
+                            <div class="result encryption-result-section notification">
+                                <h3 class="subtitle">Encrypted text </h3>
+                                <p id="encrypted-result" class="result-section"></p>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="column">
+                            <div class="box">
+                              <form id="decrypt-set">
+                                <div class="field">
+                                  <label class="label">Encrypted word/text to decrypt</label>
+                                  <div class="control">
+                                    <input class="input input-string" id="decrypt-plain-string" type="text" placeholder="Encrypted string">
+                                  </div>
+                                </div>
+                                <!-- secret -->
+                
+                                <div class="field">
+                                  <label class="label">secret to encode string with</label>
+                                  <div class="control">
+                                    <input class="input input-string" id="decrypt-password" type="text" placeholder="Password">
+                                  </div>
+                                </div>
+                                <!-- submit for decryption -->
+                
+                                <div class="field is-grouped">
+                                  <p class="control">
+                                    <input id="decrypt-submit" type="submit" value="Decrypt" class="button is-primary">
+                                  </p>
+                                  <!-- clear the decryption part -->
+                
+                                  <p class="control">
+                                    <input type="submit" value="Clear" class="clear-form button is-light">
+                                  </p>
+                                </div>
+                              </form>
+                              <!-- results -->
+                
+                              <div class="result decryption-result-section notification">
+                                <h3 class="subtitle">Decrypted text</h3>
+                                <span id="decrypted-result" class="result-section"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- body ends here -->
+        
+    </body>
+</html>

@@ -1,0 +1,23 @@
+/* this will have the styles that we will use */
+/* notification styles */
+.notification{
+margin-top: 30px;
+padding: 1.25rem 1.5rem;
+
+}
+/* screen setting styles */
+@media screen and (min-width: 769px) {
+.column {
+    min-width: 47%;} 
+}
+/* This is the title systles  */
+.title, .subtitle{
+    text-align: center;
+}
+/* paragraph styles */
+P{
+    word-wrap: break-word;
+}
+
+
+/* we are done setting up the styles that we will need */
